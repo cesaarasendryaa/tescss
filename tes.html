@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotika</title>
+    <style>
+
+        /* color
+        #C00000
+        #D4AF37
+        #D50000 */
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    body{
+        margin: 0;
+        overflow-x: hidden;
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: black;
+        color: #D4AF37;
+        line-height: 1.6;
+    }
+
+    .header {
+        height: 80px;
+        background-color: #ffffff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .container-header{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        width: 30px;
+        margin-left: 100px;
+    }
+
+    .nav-menu{
+        display: flex;
+        gap: 30px;
+        margin-right: 100px;
+    }
+
+    .nav-menu a{
+        font-size: 14px;
+        color: #C00000;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .nav-menu a:hover{
+        color: #D4AF37;
+    }
+
+    .hero-section{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .judul{
+        color: #D4AF37;
+        border: 1px solid #C00000;
+        border-radius: 40px;
+        padding: 8px 15px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+    .belajar-robotik{
+        color: #C00000;
+        font-weight: bold;
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+
+    .belajar-robotik span{
+        color: transparent;
+        -webkit-text-stroke:1px #D4AF37 ;
+    }
+
+    .penjelasan{
+        color:#ffffff ;
+        margin-bottom: 30px;
+        font-size: large;
+    }
+
+    .hero-button{
+        display: flex;
+        gap: 30px;
+        margin-bottom: 45px;
+    }
+
+    .button{
+        padding: 10px 30px;
+        border-radius: 30px;
+        background-color: #D4AF37;
+        color: #C00000;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        transition: 0.5s ease;
+    }
+
+    .bawah{
+        background-color: black;
+        color: #D4AF37;
+        border: 1px solid #C00000;
+    }
+
+    .button:hover{
+        transform: translateY(-5px);
+        box-shadow: 2px 3px 20px #ffffff;
+    }
+
+    .bawah:hover{
+        background-color: #C00000;
+        color: #D4AF37;
+    }
+
+    .keunggulan{
+        text-align: center;
+    }
+
+    .keunggulan-judul{
+        margin-top: 50px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .keunggulan-why{
+        color: #C00000;
+        margin-top: 20px;
+    }
+
+    .keunggulan-penjelasan{
+        color: #ffffff;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: large;
+    }
+
+    .carddd{
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .card{
+        height: 300px;
+        width: 300px;
+        background-color: #C00000;
+        color: black;
+        border-radius: 10px;
+        padding: 50px;
+        text-align: center;
+        transition: 0.5s ease;
+    }
+
+    .gambar-card{
+        width: 50px;
+        margin-bottom: 5px;
+    }
+
+    .card:hover{
+        transform: translateY(-5px);
+        box-shadow: 2px 3px 20px #D4AF37;
+    }
+
+    .judul-card{
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 1px;
+        color: #D4AF37;
+    }
+
+    .jadwal{
+        text-align: center;
+    }
+
+    .jadwal-judul{
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .waktu{
+        color: #C00000;
+        margin-top: 20px;
+    }
+
+    .program-penjelasan{
+        color: #ffffff;
+        margin-top: 10px;
+    }
+
+    .card-jadwal{
+        height: 200px;
+        width: 300px;
+        background-color: #C00000;
+        color: black;
+        border-radius: 10px;
+        padding: 50px;
+        text-align: center;
+        transition: 0.5s ease;
+    }
+
+    .card-jadwal:hover{
+        transform: translateY(-5px);
+        box-shadow: 2px 3px 20px #D4AF37;
+    }
+
+    .card-jadwal2{
+        height: 200px;
+        width: 300px;
+        background-color: #D4AF37;
+        color: black;
+        border-radius: 10px;
+        padding: 50px;
+        text-align: center;
+        transition: 0.5s ease;
+    }
+
+    .card-jadwal2:hover{
+        transform: translateY(-5px);
+        box-shadow: 2px 3px 20px #D4AF37;
+    }
+
+    .judul-card2{
+        color: #C00000;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    b{
+        font-size: 20px;
+        color: black;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .kasta{
+        font-size: 14px;
+        color: #ffffff;
+    }
+    </style>
+</head>
+<body>
+    <!-- ini bagian header -->
+    <header class="header">
+        <div class="container-header">
+            <img class="logo" src="./asset/logo_porsche-removebg-preview.png" alt="">
+            <nav class="nav-menu">
+                <a href="#program">Program</a>
+                <a href="#jadwal">Jadwal</a>
+                <a href="#fasilitas">Fasilitas</a>
+                <a href="#mentor">Mentor</a>
+                <a href="#pendaftaran">Pendaftaran</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-section" id="program">
+        <div class="container">
+                <div class="judul">EKSTRAKURIKULER & LES ROBOTIK</div>
+            <h1 class="belajar-robotik">
+                BELAJAR ROBOTIK
+                <br>
+                <span>DARI NOL</span>
+            </h1>
+            <div class="penjelasan">
+                <p>
+                    Bangun robot pertamamu,pelajari coding, dan kembangkan kreativitas melalui <br> proyek nyata
+                </p>
+            </div>
+            <div class="hero-button">
+                <a href="#" class="button">Daftar Sekarang</a>
+                <a href="#" class="button bawah">Lihat Program</a>
+            </div>
+        </div>
+    </section>
+    <section class="keunggulan">
+        <div class="keunggulan-judul">
+            KEUNGGULAN
+        </div>
+        <div class="keunggulan-why">
+            <h1>
+                Kenapa Belajar Robotik??
+            </h1>
+        </div>
+        <div class="keunggulan-penjelasan">
+            <p>
+                Belajar teknologi tidak hanya tentang teori, tetapi juga tentang membuat sesuatu <br> secara langsung.
+            </p>
+        </div>
+        <div class="carddd">
+                <div class="card">
+                    <img class="gambar-card" src="./asset/logo_porsche-removebg-preview.png" alt="">
+                    <p class="judul-card">kreativitas</p> 
+                    <p>
+                        Melatih siswa menemukan solusi melalui proyek robotik.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="gambar-card" src="./asset/logo_porsche-removebg-preview.png" alt="">
+                    <p class="judul-card">coding</p> 
+                    <p>
+                        Mengenal logika pemrograman melalui praktik langsung
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="gambar-card" src="./asset/logo_porsche-removebg-preview.png" alt="">
+                    <p class="judul-card">praktik</p> 
+                    <p>
+                        Belajar menggunakan sensor, motor, dan berbagai komponen.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="gambar-card" src="./asset/logo_porsche-removebg-preview.png" alt="">
+                    <p class="judul-card">project</p> 
+                    <p>
+                        Setiap peserta membuat proyek sesuai dengan levelnya
+                    </p>
+                </div>
+            </div>
+    </section>
+    <section class="jadwal">
+        <div class="jadwal-judul">
+            <p>
+                JADWAL BELAJAR
+            </p>
+        </div>
+        <h1 class="waktu">
+            Waktu Pembelajaran
+        </h1>
+        <div class="carddd">
+            <div class="card-jadwal">
+                    <p class="judul-card">senin</p> 
+                    <b>15.30 - 17.00</b>
+                    <p class="kasta">
+                        beginner
+                    </p>
+            </div>
+            <div class="card-jadwal2">
+                    <p class="judul-card2">selasa</p> 
+                    <b>15.30 - 17.00</b>
+                    <p class="kasta">
+                        intermediate
+                    </p>
+            </div>
+            <div class="card-jadwal">
+                    <p class="judul-card">rabu</p> 
+                    <b>09.00 - 11.00</b>
+                    <p class="kasta">
+                        beginner
+                    </p>
+            </div>
+    </section>
+</body>
+</html>
