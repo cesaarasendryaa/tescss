@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotika</title>
+    <title>Roboticya - Les Robotic</title>
+    <link rel="shortcut icon" href="asset/logo_porsche-removebg-preview.png" type="image/x-icon">
     <style>
 
         /* color
@@ -30,12 +31,30 @@
         line-height: 1.6;
     }
 
+    h1{
+        color: #C00000;
+        margin-top: 20px;
+    }
+
+    section{
+        padding: 50px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .judul{
+        margin-top: 50px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
     .header {
         height: 80px;
-        background-color: #ffffff;
+        background-color: #C00000;
         position: sticky;
         top: 0;
         z-index: 1000;
+        border-bottom: 1px dotted #D4AF37;
     }
 
     .container-header{
@@ -48,6 +67,10 @@
     .logo{
         width: 30px;
         margin-left: 100px;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 20px;
+        color: #ffffff;
     }
 
     .nav-menu{
@@ -58,13 +81,13 @@
 
     .nav-menu a{
         font-size: 14px;
-        color: #C00000;
+        color: #D4AF37;
         font-weight: bold;
         text-decoration: none;
     }
 
     .nav-menu a:hover{
-        color: #D4AF37;
+        color: brown;
     }
 
     .hero-section{
@@ -82,7 +105,7 @@
         text-align: center;
     }
 
-    .judul{
+    .judul-1{
         color: #D4AF37;
         border: 1px solid #C00000;
         border-radius: 40px;
@@ -106,6 +129,7 @@
     .penjelasan{
         color:#ffffff ;
         margin-bottom: 30px;
+        margin-top: 20px;
         font-size: large;
     }
 
@@ -144,24 +168,7 @@
 
     .keunggulan{
         text-align: center;
-    }
-
-    .keunggulan-judul{
-        margin-top: 50px;
-        font-size: 14px;
-        font-weight: bold;
-    }
-
-    .keunggulan-why{
-        color: #C00000;
-        margin-top: 20px;
-    }
-
-    .keunggulan-penjelasan{
-        color: #ffffff;
-        margin-top: 20px;
-        margin-bottom: 30px;
-        font-size: large;
+        padding: 50px;
     }
 
     .carddd{
@@ -172,8 +179,8 @@
     }
 
     .card{
-        height: 300px;
-        width: 300px;
+        height: 370px;
+        width: 350px;
         background-color: #C00000;
         color: black;
         border-radius: 10px;
@@ -183,8 +190,12 @@
     }
 
     .gambar-card{
-        width: 50px;
+        width: 40px;
         margin-bottom: 5px;
+        object-fit:fill;
+        height: 100px;
+        width:auto;
+        font-size: 40px;
     }
 
     .card:hover{
@@ -194,29 +205,23 @@
 
     .judul-card{
         font-weight: bold;
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 1px;
         color: #D4AF37;
     }
 
     .jadwal{
+        padding: 50px;
         text-align: center;
-    }
-
-    .jadwal-judul{
-        margin-top: 50px;
-        font-weight: bold;
-        font-size: 14px;
     }
 
     .waktu{
         color: #C00000;
-        margin-top: 20px;
+        margin-top: 50px;
     }
 
-    .program-penjelasan{
-        color: #ffffff;
-        margin-top: 10px;
+    b{
+        margin-bottom: 10px;
     }
 
     .card-jadwal{
@@ -248,13 +253,14 @@
 
     .card-jadwal2:hover{
         transform: translateY(-5px);
-        box-shadow: 2px 3px 20px #D4AF37;
+        box-shadow: 2px 3px 20px #C00000;
     }
 
     .judul-card2{
         color: #C00000;
         font-weight: bold;
         font-size: 20px;
+        margin-bottom: 1px;
     }
 
     b{
@@ -268,13 +274,306 @@
         font-size: 14px;
         color: #ffffff;
     }
+
+    .pembungkus{
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    .grid-program {
+        display:flex;
+        justify-content:space-between;
+        gap: 20px;
+    }
+
+    .kartu-program { 
+        padding: 30px;
+        background: #D4AF37;
+        border: 1px solid brown;
+        border-top: 4px solid #C00000;
+        border-radius: 15px;
+        text-align: left;
+        transition: ease 0.5s;
+    }
+
+    .kartu-program-unggulan{
+        background-color: goldenrod;
+        border: 4px solid #C00000;
+    }
+
+    .kartu-program:hover {
+        transform: translateY(-5px);
+        box-shadow: 2px 3px 20px lightgoldenrodyellow;
+    }
+
+    .nomor-program {
+        color: #C00000;
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .level-program {
+        display: block;
+        margin-top: 5px;
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .kartu-program h3 {
+        margin: 5px 0;
+        color: #C00000;
+        font-size: 20px;
+    }
+
+    .kartu-program p {
+        min-height: 58px;
+        color: brown;
+        font-size: 16px;
+    }
+
+    .kartu-program h4 {
+        color: black;
+        margin-top: 12px;
+        font-size: 12px;
+        margin-left: 1px;
+        margin-bottom: 10px;
+    }
+
+    .kartu-program li {
+        color: black;
+        font-size: 12px;
+    }
+
+    .kartu-program ul{
+        margin-left: 15px;
+    }
+
+    .info-program {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        color: #C00000;
+        font-size: 12px;
+    }
+    .harga-program {
+        margin-top: 15px;
+        color: brown;
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .tombol-pilih {
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+        background: #C00000;
+        color: white;
+        padding: 10px 20px;
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 12px;
+        justify-content: center;
+    }
+
+    .tombol-pilih:hover {
+        background: brown;
+        transform: translateY(-2px);
+    }
+
+    .card-fasilitas{
+        height: 70px;
+        width: 500px;
+        display: flex;
+        background-color: #C00000;
+        color: black;
+        border-radius: 15px;
+        padding: 50px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease;
+    }
+
+    .card-fasilitas:hover{
+        transform: translateY(-5px);
+        box-shadow: 2px 3px 20px #C00000;
+        border-bottom: 1px solid #D4AF37;
+        border-right: 2px solid #D4AF37;
+    }
+
+    .tempat-card{
+        margin-left: 73px;
+    }
+
+    .card-fasilitas1{
+        display: flex;
+        gap: 20px;
+        margin-bottom:20px;
+    }
+    .card-fasilitas2{
+        display: flex;
+        gap: 20px;
+    }
+
+    .mentor{
+        display: flex;
+    }
+
+    .kanan{
+        text-align: start;
+        margin-left: 150px;
+    }
+
+    .ins{
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .bawah-kiri{
+        display: flex;
+        gap: 30px;
+    }
+
+    .jumlh{
+        color: #C00000;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    
+    .ket{
+        font-size: 12px;
+    }
+
+    
+
+    .wadah {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        text-align: start;
+    }
+
+    .form-card {
+        width: 700px;
+        height: 600px;
+        background-color: #C00000;
+        color: #D4AF37;
+        border-radius: 20px;
+        padding: 47px 46px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    input,
+    select {
+        width: 100%;
+        height: 54px;
+        padding: 0 19px;
+        border: 2px solid #D4AF37;
+        border-radius: 10px;
+        background: #ffffff;
+        font-size: 17px;
+        color: gray;
+        outline: none;
+    }
+
+    input::placeholder {
+        color: gray;
+    }
+
+    input:focus,
+    select:focus {
+        border-color: #D4AF37;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    button {
+        width: 100%;
+        height: 55px;
+        margin-top: 3px;
+        border: none;
+        border-radius: 9px;
+        background: #D4AF37;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 100px;
+    }
+
+    button:hover {
+        background-color: gray;
+        color: #ffffff;
+    }
+
+    .footer{
+        padding: 50px 8% 20px;
+        background-color: brown;
+        color: #ffffff;
+    }
+
+
+    .footer-konten{
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .footer h2{
+        margin-bottom: 8px;
+        color: #D4AF37;
+    }
+
+    .footer-contact{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-contact p{
+        font-weight: normal;
+        font-size: 14px;
+        color: #D4AF37;
+    }
+
+    .footer-bottom{
+        max-width: 1100px;
+        margin: 40px auto 0;
+        padding-top: 20px;
+        font-size: 13px;
+        border-top: 1px solid #D4AF37;
+        text-align: center;
+        margin-top: 20px;
+        color: gainsboro;
+    }
     </style>
 </head>
 <body>
     <!-- ini bagian header -->
     <header class="header">
         <div class="container-header">
-            <img class="logo" src="./asset/logo_porsche-removebg-preview.png" alt="">
+            <p class="logo">
+                ROBOTICYA
+            </p>
             <nav class="nav-menu">
                 <a href="#program">Program</a>
                 <a href="#jadwal">Jadwal</a>
@@ -284,9 +583,9 @@
             </nav>
         </div>
     </header>
-    <section class="hero-section" id="program">
+    <section class="hero-section" id="">
         <div class="container">
-                <div class="judul">EKSTRAKURIKULER & LES ROBOTIK</div>
+                <div class="judul-1">EKSTRAKURIKULER & LES ROBOTIK</div>
             <h1 class="belajar-robotik">
                 BELAJAR ROBOTIK
                 <br>
@@ -298,49 +597,55 @@
                 </p>
             </div>
             <div class="hero-button">
-                <a href="#" class="button">Daftar Sekarang</a>
-                <a href="#" class="button bawah">Lihat Program</a>
+                <a href="#pendaftaran" class="button">Daftar Sekarang</a>
+                <a href="#program" class="button bawah">Lihat Program</a>
             </div>
         </div>
     </section>
     <section class="keunggulan">
-        <div class="keunggulan-judul">
+        <div class="judul">
             KEUNGGULAN
         </div>
-        <div class="keunggulan-why">
-            <h1>
-                Kenapa Belajar Robotik??
-            </h1>
-        </div>
-        <div class="keunggulan-penjelasan">
+        <h1>
+            Kenapa Belajar Robotik??
+        </h1>
+        <div class="penjelasan">
             <p>
                 Belajar teknologi tidak hanya tentang teori, tetapi juga tentang membuat sesuatu <br> secara langsung.
             </p>
         </div>
         <div class="carddd">
                 <div class="card">
-                    <img class="gambar-card" src="./asset/logo_porsche-removebg-preview.png" alt="">
+                    <p class="gambar-card">
+                        💡
+                    </p>
                     <p class="judul-card">kreativitas</p> 
                     <p>
                         Melatih siswa menemukan solusi melalui proyek robotik.
                     </p>
                 </div>
                 <div class="card">
-                    <img class="gambar-card" src="./asset/logo_porsche-removebg-preview.png" alt="">
+                    <p class="gambar-card">
+                        💻
+                    </p>
                     <p class="judul-card">coding</p> 
                     <p>
                         Mengenal logika pemrograman melalui praktik langsung
                     </p>
                 </div>
                 <div class="card">
-                    <img class="gambar-card" src="./asset/logo_porsche-removebg-preview.png" alt="">
+                    <p class="gambar-card">
+                        ⚙️
+                    </p>
                     <p class="judul-card">praktik</p> 
                     <p>
                         Belajar menggunakan sensor, motor, dan berbagai komponen.
                     </p>
                 </div>
                 <div class="card">
-                    <img class="gambar-card" src="./asset/logo_porsche-removebg-preview.png" alt="">
+                    <p class="gambar-card">
+                        🔧
+                    </p>
                     <p class="judul-card">project</p> 
                     <p>
                         Setiap peserta membuat proyek sesuai dengan levelnya
@@ -348,7 +653,149 @@
                 </div>
             </div>
     </section>
-    <section class="jadwal">
+    <section id="program" class="program">
+
+            <div class="pembungkus">
+
+                <div class="judul">
+                    <span>PROGRAM BELAJAR</span>
+                    <h1>Pilih Level Belajarmu</h1>
+                    <p class="penjelasan">
+                        Program disesuaikan dengan tingkat kemampuan peserta.
+                    </p>
+                </div>
+
+
+                <div class="grid-program">
+
+                    <!-- CARD PROGRAM 1 -->
+                    <article class="kartu-program">
+
+                        <div class="nomor-program">01</div>
+
+                        <span class="level-program">BEGINNER</span>
+
+                        <h3>Robotik Dasar</h3>
+
+                        <p>
+                            Cocok untuk siswa yang baru mengenal dunia robotik.
+                        </p>
+
+                        <h4>Materi:</h4>
+
+                        <ul>
+                            <li>Pengenalan robot</li>
+                            <li>Arduino / Microcontroller</li>
+                            <li>LED</li>
+                            <li>Button</li>
+                            <li>Servo</li>
+                            <li>Sensor dasar</li>
+                        </ul>
+
+                        <div class="info-program">
+                            <strong>Durasi</strong>
+                            <span>4 Pertemuan</span>
+                        </div>
+
+                        <div class="harga-program">
+                            Rp150.000
+                        </div>
+
+                        <a href="#pendaftaran" class="tombol tombol-pilih">
+                            Pilih Program
+                        </a>
+
+                    </article>
+
+
+                    <!-- CARD PROGRAM 2 -->
+                    <article class="kartu-program kartu-program-unggulan">
+
+                        
+
+                        <div class="nomor-program">02</div>
+
+                        <span class="level-program">INTERMEDIATE</span>
+
+                        <h3>Smart Robot</h3>
+
+                        <p>
+                            Untuk siswa yang sudah memahami dasar
+                            pemrograman dan elektronika.
+                        </p>
+
+                        <h4>Materi:</h4>
+
+                        <ul>
+                            <li>Ultrasonic Sensor</li>
+                            <li>Servo</li>
+                            <li>Motor</li>
+                            <li>Sensor cahaya</li>
+                            <li>Pemrograman kondisi</li>
+                            <li>Mini Project Robot</li>
+                        </ul>
+
+                        <div class="info-program">
+                            <strong>Durasi</strong>
+                            <span>6 Pertemuan</span>
+                        </div>
+
+                        <div class="harga-program">
+                            Rp200.000
+                        </div>
+
+                        <a href="#pendaftaran" class="tombol tombol-pilih">
+                            Pilih Program
+                        </a>
+
+                    </article>
+
+
+                    <!-- CARD PROGRAM 3 -->
+                    <article class="kartu-program">
+
+                        <div class="nomor-program">03</div>
+
+                        <span class="level-program">ADVANCED</span>
+
+                        <h3>IoT & Robotik</h3>
+
+                        <p>
+                            Program lanjutan untuk membuat project
+                            robot dan IoT.
+                        </p>
+
+                        <h4>Materi:</h4>
+
+                        <ul>
+                            <li>IoT dasar</li>
+                            <li>Wi-Fi</li>
+                            <li>Sensor</li>
+                            <li>Monitoring data</li>
+                            <li>Otomasi</li>
+                            <li>Final Project</li>
+                        </ul>
+
+                        <div class="info-program">
+                            <strong>Durasi</strong>
+                            <span>8 Pertemuan</span>
+                        </div>
+
+                        <div class="harga-program">
+                            Rp250.000
+                        </div>
+
+                        <a href="#pendaftaran" class="tombol tombol-pilih">
+                            Pilih Program
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+    </section>
+    <section class="jadwal" id="jadwal">
         <div class="jadwal-judul">
             <p>
                 JADWAL BELAJAR
@@ -380,5 +827,202 @@
                     </p>
             </div>
     </section>
+    <section class="Fasilitas" id="fasilitas">
+        <div class="judul">
+            <p>
+                FASILITAS
+            </p>
+        </div>
+        <h1>
+            Semua Yang Dibutuhkan
+        </h1>
+        <div class="penjelasan">
+            Peserta mendapatkan fasilitas untuk mendukung proses pembelajaran.
+        </div>
+        <div class="tempat-card">
+            <div class="card-fasilitas1">     
+                <div class="card-fasilitas">
+                    <div class="info-fasilitas">
+                        <p class="judul-card">
+                        Robot Kit
+                        </p>
+                        <p class="card-penjelasan">
+                            Robot kit untuk kegiatan praktik.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-fasilitas">
+                    <div class="info-fasilitas">
+                        <p class="judul-card">
+                            Laptop
+                        </p>
+                        <p class="card-penjelasan">
+                            Perangkat untuk coding.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-fasilitas2">     
+                <div class="card-fasilitas">
+                    <div class="info-fasilitas">
+                        <p class="judul-card">
+                        Workshop
+                        </p>
+                        <p class="card-penjelasan">
+                            Tempat praktik berbagai komponen.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-fasilitas">
+                    <div class="info-fasilitas">
+                        <p class="judul-card">
+                        Modul
+                        </p>
+                        <p class="card-penjelasan">
+                            Materi pembelajaran setiap level.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="mentor" id="mentor">
+        <div class="kiri">
+            <div class="kiri">
+                <div class="picture">
+                    <img src="/asset/profile_for_portofolio-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="kanan">
+            <div class="content">
+                <div class="judul">
+                    <p>
+                        MENTOR
+                    </p>
+                </div>
+                <h1>
+                    CAESAR RASENDRYA
+                </h1>
+                <p class="ins">
+                    Robotic Instructor
+                </p>
+                <p class="penjelasan">
+                    Pengajar robotik dan pemrograman yang 
+                    <br> berfokus pada pembelajaran 
+                    <br>berbasis proyek dan praktik.
+                </p>
+                <div class="bawah-kiri">
+                    <div class="pengalaman">
+                    <p class="jumlh">
+                        3+
+                    </p>
+                    <p class="ket">
+                        Tahun Pengalaman
+                    </p>
+                </div>
+                <div class="pengalaman">
+                    <p class="jumlh">
+                        10+
+                    </p>
+                    <p class="ket">
+                        Project
+                    </p>
+                </div>
+                <div class="pengalaman">
+                    <p class="jumlh">
+                        150+
+                    </p>
+                    <p class="ket">
+                        Member
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pendaftaran" id="pendaftaran">
+        <div class="judul">
+            <p>
+                PENDAFTARAN
+            </p>
+        </div>
+        <h1>
+            Mulai Belajar Robotic!
+        </h1>
+        <div class="penjelasan">
+            Isi data berikut untuk melakukan pendaftaran program.
+        </div>
+            <!-- FORM -->
+    <div class="wadah">
+        <form class="form-card">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Masukkan nama lengkap"
+                >
+            </div>
+            <div class="form-group">
+                <label for="kelas">Kelas</label>
+                <input
+                    type="text"
+                    id="kelas"
+                    placeholder="Contoh: VIII A"
+                >
+            </div>
+            <div class="form-group">
+                <label for="program">Pilih Program</label>
+                <select id="program">
+                    <option value="pilih">Pilih program</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="whatsapp">Nomor WhatsApp</label>
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    placeholder="08xxxxxxxxxx"
+                >
+            </div>
+            <button type="submit">
+                Daftar Sekarang
+            </button>
+        </form>
+    </div>
+    </section>
+    <footer class="footer">
+        <div class="parent-footertop">
+            <div class="footer-konten">
+            <div>
+                <h2>
+                    ROBOTICYA
+                </h2>
+                <p>
+                    Build - Code - Create - Innovate
+                </p>
+            </div>
+            <div class="footer-contact">
+                <p>
+                    📍 Lab Teknologi Sekolah
+                </p>
+                <p>
+                    📞 +62 896-7482-7581
+                </p>
+                <p>
+                    ✉️ qeidrya11@gmail.com
+                </p>
+            </div>
+        </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy 2026 Roboticya. All Right Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
